@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dfee61e92ed23e41706c91047e194803 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_dfee61e92ed23e41706c91047e194803" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_dfee61e92ed23e41706c91047e194803 = L.map(
+                "map_dfee61e92ed23e41706c91047e194803",
+                {
+                    center: [9.082, 8.6753],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2cf07837274b99d413ee86ced6f306b0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2cf07837274b99d413ee86ced6f306b0.addTo(map_dfee61e92ed23e41706c91047e194803);
+        
+    
+            var feature_group_35bfe046d79bbec0e514b5ce1f26b4cf = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_35bfe046d79bbec0e514b5ce1f26b4cf.addTo(map_dfee61e92ed23e41706c91047e194803);
+        
+    
+            var feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163 = L.featureGroup.subGroup(
+                feature_group_35bfe046d79bbec0e514b5ce1f26b4cf
+            );
+        
+    
+            var heat_map_56dc5e32aaa37febb7ddd52c83cb4cd4 = L.heatLayer(
+                [[4.9, 6.2, 1.0], [6.6, 7.7, 1.0], [6.6, 7.1, 1.0], [7.8, 3.9, 1.0], [5.5, 5.9, 5.0], [9.2, 8.8, 3.0], [7.8, 7.8, 10.0], [9.0, 8.7, 1.0], [5.8, 8.1, 7.0], [6.6, 7.7, 1.0], [4.6, 6.3, 1.0], [6.3, 4.7, 1.0], [5.5, 7.0, 2.0], [5.8, 7.5, 1.0], [9.6, 3.9, 2.0], [7.1, 8.6, 1.0], [7.1, 8.6, 1.0], [7.1, 8.6, 1.0], [6.3, 4.8, 1.0], [7.1, 2.8, 4.0], [6.5, 7.4, 1.0], [7.7, 8.9, 3.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 13,
+  "radius": 15,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_56dc5e32aaa37febb7ddd52c83cb4cd4.addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+            var circle_marker_14853adcbaca98117d102f3e62deca28 = L.circleMarker(
+                [4.9, 6.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_c6a3f4e25a9cb0acbe4d319698b2ea87 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_23a9bbc563983d8e25ee2beadf05836b = $(`<div id="html_23a9bbc563983d8e25ee2beadf05836b" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Bayelsa State<br>         <b>Year:</b> 2025<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_c6a3f4e25a9cb0acbe4d319698b2ea87.setContent(html_23a9bbc563983d8e25ee2beadf05836b);
+            
+        
+
+        circle_marker_14853adcbaca98117d102f3e62deca28.bindPopup(popup_c6a3f4e25a9cb0acbe4d319698b2ea87)
+        ;
+
+        
+    
+    
+            var circle_marker_1ecf114981c70db6aad28d34cf94d37b = L.circleMarker(
+                [6.6, 7.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_8811220680ecd61f7a8723ce967c89bb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_07926ebf25f26c04fe8e21299d84be8b = $(`<div id="html_07926ebf25f26c04fe8e21299d84be8b" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Enugu State<br>         <b>Year:</b> 2025<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_8811220680ecd61f7a8723ce967c89bb.setContent(html_07926ebf25f26c04fe8e21299d84be8b);
+            
+        
+
+        circle_marker_1ecf114981c70db6aad28d34cf94d37b.bindPopup(popup_8811220680ecd61f7a8723ce967c89bb)
+        ;
+
+        
+    
+    
+            var circle_marker_82aef005d6c2c15f10bfaff7f1d7dc73 = L.circleMarker(
+                [6.6, 7.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_bf512ce936b03ff197b7f80d01a5b327 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2f8e220a3efccb79c9e544f106b76433 = $(`<div id="html_2f8e220a3efccb79c9e544f106b76433" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Enugu State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_bf512ce936b03ff197b7f80d01a5b327.setContent(html_2f8e220a3efccb79c9e544f106b76433);
+            
+        
+
+        circle_marker_82aef005d6c2c15f10bfaff7f1d7dc73.bindPopup(popup_bf512ce936b03ff197b7f80d01a5b327)
+        ;
+
+        
+    
+    
+            var circle_marker_ad36cf1be4d77259116666c817179bff = L.circleMarker(
+                [7.8, 3.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_3badb151ce04aa4854908b8ffc41e46c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_afb5e72138621fb4eda8cf5893649dc5 = $(`<div id="html_afb5e72138621fb4eda8cf5893649dc5" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Oyo State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_3badb151ce04aa4854908b8ffc41e46c.setContent(html_afb5e72138621fb4eda8cf5893649dc5);
+            
+        
+
+        circle_marker_ad36cf1be4d77259116666c817179bff.bindPopup(popup_3badb151ce04aa4854908b8ffc41e46c)
+        ;
+
+        
+    
+    
+            var circle_marker_f814edf503dd1c62315031c758f99c3a = L.circleMarker(
+                [5.5, 5.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_f8c8f382a853afce0ffae99ac1334570 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_49d7539cba6a0a17cc59eedcbbd08629 = $(`<div id="html_49d7539cba6a0a17cc59eedcbbd08629" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Delta State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 5<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_f8c8f382a853afce0ffae99ac1334570.setContent(html_49d7539cba6a0a17cc59eedcbbd08629);
+            
+        
+
+        circle_marker_f814edf503dd1c62315031c758f99c3a.bindPopup(popup_f8c8f382a853afce0ffae99ac1334570)
+        ;
+
+        
+    
+    
+            var circle_marker_cb03e7038829a91e9d3613af0613c82f = L.circleMarker(
+                [9.2, 8.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_8652810d99111da227dabfe59a0c3b3c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_910b6c2df778868203b453b1b0663ef2 = $(`<div id="html_910b6c2df778868203b453b1b0663ef2" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Plateau State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 3<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_8652810d99111da227dabfe59a0c3b3c.setContent(html_910b6c2df778868203b453b1b0663ef2);
+            
+        
+
+        circle_marker_cb03e7038829a91e9d3613af0613c82f.bindPopup(popup_8652810d99111da227dabfe59a0c3b3c)
+        ;
+
+        
+    
+    
+            var circle_marker_eb0fcf65c43522de23aec9cfb62a70c1 = L.circleMarker(
+                [7.8, 7.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_5840a192dab3e3aa36d2ad0936208b36 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b1ef0016ebeb0a349f0d80e7d08b149d = $(`<div id="html_b1ef0016ebeb0a349f0d80e7d08b149d" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Benue State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 10<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_5840a192dab3e3aa36d2ad0936208b36.setContent(html_b1ef0016ebeb0a349f0d80e7d08b149d);
+            
+        
+
+        circle_marker_eb0fcf65c43522de23aec9cfb62a70c1.bindPopup(popup_5840a192dab3e3aa36d2ad0936208b36)
+        ;
+
+        
+    
+    
+            var circle_marker_1bb661d4b3b767ead3489f2943696e5c = L.circleMarker(
+                [9.0, 8.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_ccdfb1fbd437e1d29cbacdc3a5602147 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_be95201a4e59d733bd9fdbbe714726f5 = $(`<div id="html_be95201a4e59d733bd9fdbbe714726f5" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Nasarawa State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_ccdfb1fbd437e1d29cbacdc3a5602147.setContent(html_be95201a4e59d733bd9fdbbe714726f5);
+            
+        
+
+        circle_marker_1bb661d4b3b767ead3489f2943696e5c.bindPopup(popup_ccdfb1fbd437e1d29cbacdc3a5602147)
+        ;
+
+        
+    
+    
+            var circle_marker_ecb24a63eefe5b7e24a90a373a8dc0bb = L.circleMarker(
+                [5.8, 8.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_e5b8e0ad58d9ede15452e5a36be4cbfb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_adb17dcd5ed2c5f9842f6b7d369ab007 = $(`<div id="html_adb17dcd5ed2c5f9842f6b7d369ab007" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Cross River State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 7<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_e5b8e0ad58d9ede15452e5a36be4cbfb.setContent(html_adb17dcd5ed2c5f9842f6b7d369ab007);
+            
+        
+
+        circle_marker_ecb24a63eefe5b7e24a90a373a8dc0bb.bindPopup(popup_e5b8e0ad58d9ede15452e5a36be4cbfb)
+        ;
+
+        
+    
+    
+            var circle_marker_720c9cd5b78c7316e2a8ad198a08710a = L.circleMarker(
+                [6.6, 7.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_cf6dc780ab102a9db2e84192e9550172 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8a9177d307cd461ff77f019ede76cb31 = $(`<div id="html_8a9177d307cd461ff77f019ede76cb31" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Enugu State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_cf6dc780ab102a9db2e84192e9550172.setContent(html_8a9177d307cd461ff77f019ede76cb31);
+            
+        
+
+        circle_marker_720c9cd5b78c7316e2a8ad198a08710a.bindPopup(popup_cf6dc780ab102a9db2e84192e9550172)
+        ;
+
+        
+    
+    
+            var circle_marker_b2102f49a570b4e4b610553277c8de01 = L.circleMarker(
+                [4.6, 6.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_123502f0f91f8bcc84327d0f4f74f2c3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3c03f985c3955e66bc45a32a5721646c = $(`<div id="html_3c03f985c3955e66bc45a32a5721646c" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Bayelsa State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_123502f0f91f8bcc84327d0f4f74f2c3.setContent(html_3c03f985c3955e66bc45a32a5721646c);
+            
+        
+
+        circle_marker_b2102f49a570b4e4b610553277c8de01.bindPopup(popup_123502f0f91f8bcc84327d0f4f74f2c3)
+        ;
+
+        
+    
+    
+            var circle_marker_0923bc17a0fe2b28a496c19d683c13da = L.circleMarker(
+                [6.3, 4.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_ffdafb90a946f00e4c96aadbecfb71d0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_732ca4de570f19d5fbab0c8998080ed9 = $(`<div id="html_732ca4de570f19d5fbab0c8998080ed9" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ondo State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_ffdafb90a946f00e4c96aadbecfb71d0.setContent(html_732ca4de570f19d5fbab0c8998080ed9);
+            
+        
+
+        circle_marker_0923bc17a0fe2b28a496c19d683c13da.bindPopup(popup_ffdafb90a946f00e4c96aadbecfb71d0)
+        ;
+
+        
+    
+    
+            var circle_marker_2956325719eba7f26be6f29b5802ffbd = L.circleMarker(
+                [5.5, 7.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_fbe23bee10cfd10ae4c3bb2879e24f9e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bce08a2dc8b749d4846932fc2ba7fb3f = $(`<div id="html_bce08a2dc8b749d4846932fc2ba7fb3f" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Imo State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_fbe23bee10cfd10ae4c3bb2879e24f9e.setContent(html_bce08a2dc8b749d4846932fc2ba7fb3f);
+            
+        
+
+        circle_marker_2956325719eba7f26be6f29b5802ffbd.bindPopup(popup_fbe23bee10cfd10ae4c3bb2879e24f9e)
+        ;
+
+        
+    
+    
+            var circle_marker_db6c18b0b7f984c104406d864335357b = L.circleMarker(
+                [5.8, 7.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_8a9105616d998e309e54e95d4a655250 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_37c21652e33eaadb8c6d7df8ecc385cf = $(`<div id="html_37c21652e33eaadb8c6d7df8ecc385cf" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Abia State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_8a9105616d998e309e54e95d4a655250.setContent(html_37c21652e33eaadb8c6d7df8ecc385cf);
+            
+        
+
+        circle_marker_db6c18b0b7f984c104406d864335357b.bindPopup(popup_8a9105616d998e309e54e95d4a655250)
+        ;
+
+        
+    
+    
+            var circle_marker_19b77620f857d3fa729c88fc2681dc86 = L.circleMarker(
+                [9.6, 3.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_f748434dc0cfc2f55d43662f8cd284bd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3c988d4b9d744f2af2c1d7ed946e262d = $(`<div id="html_3c988d4b9d744f2af2c1d7ed946e262d" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Kwara State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_f748434dc0cfc2f55d43662f8cd284bd.setContent(html_3c988d4b9d744f2af2c1d7ed946e262d);
+            
+        
+
+        circle_marker_19b77620f857d3fa729c88fc2681dc86.bindPopup(popup_f748434dc0cfc2f55d43662f8cd284bd)
+        ;
+
+        
+    
+    
+            var circle_marker_4cfd00b95868a41a54558b70b09d1472 = L.circleMarker(
+                [7.1, 8.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_5de4fc1c141acb5fb11d19f138162dda = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9a3014b5185b9223e35fbf964061026a = $(`<div id="html_9a3014b5185b9223e35fbf964061026a" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Benue State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_5de4fc1c141acb5fb11d19f138162dda.setContent(html_9a3014b5185b9223e35fbf964061026a);
+            
+        
+
+        circle_marker_4cfd00b95868a41a54558b70b09d1472.bindPopup(popup_5de4fc1c141acb5fb11d19f138162dda)
+        ;
+
+        
+    
+    
+            var circle_marker_13f05d69a51d09500407b8fdf9869bb9 = L.circleMarker(
+                [7.1, 8.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_e9ed0efe557347f4f585a6fd785f426b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2752d12612ccd8b0dcd3b0873251e4aa = $(`<div id="html_2752d12612ccd8b0dcd3b0873251e4aa" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Benue State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_e9ed0efe557347f4f585a6fd785f426b.setContent(html_2752d12612ccd8b0dcd3b0873251e4aa);
+            
+        
+
+        circle_marker_13f05d69a51d09500407b8fdf9869bb9.bindPopup(popup_e9ed0efe557347f4f585a6fd785f426b)
+        ;
+
+        
+    
+    
+            var circle_marker_62cb93e1f0f2d3a4f9a463710609c6aa = L.circleMarker(
+                [7.1, 8.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_548734240e3fa37e316a8ddbf19cf3f5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_44df61869381764f5f22e3cbecf946c9 = $(`<div id="html_44df61869381764f5f22e3cbecf946c9" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Benue State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_548734240e3fa37e316a8ddbf19cf3f5.setContent(html_44df61869381764f5f22e3cbecf946c9);
+            
+        
+
+        circle_marker_62cb93e1f0f2d3a4f9a463710609c6aa.bindPopup(popup_548734240e3fa37e316a8ddbf19cf3f5)
+        ;
+
+        
+    
+    
+            var circle_marker_1970715f634c79d8f217d71fb9bbb24c = L.circleMarker(
+                [6.3, 4.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_5e969a857eca6f14b571a5a1a7a0973c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e05c8e1ed2bc54678d4efa5eb699984f = $(`<div id="html_e05c8e1ed2bc54678d4efa5eb699984f" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ondo State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_5e969a857eca6f14b571a5a1a7a0973c.setContent(html_e05c8e1ed2bc54678d4efa5eb699984f);
+            
+        
+
+        circle_marker_1970715f634c79d8f217d71fb9bbb24c.bindPopup(popup_5e969a857eca6f14b571a5a1a7a0973c)
+        ;
+
+        
+    
+    
+            var circle_marker_80c6f5d8f3e747e6bfbaf90d73526180 = L.circleMarker(
+                [7.1, 2.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_4835876e92f790a1580ee1b5e0bcd835 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_33b78d60c71dc41e789496ca2c3df6c0 = $(`<div id="html_33b78d60c71dc41e789496ca2c3df6c0" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ogun State<br>         <b>Year:</b> 2020<br>         <b>Victims:</b> 4<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_4835876e92f790a1580ee1b5e0bcd835.setContent(html_33b78d60c71dc41e789496ca2c3df6c0);
+            
+        
+
+        circle_marker_80c6f5d8f3e747e6bfbaf90d73526180.bindPopup(popup_4835876e92f790a1580ee1b5e0bcd835)
+        ;
+
+        
+    
+    
+            var circle_marker_4ebf9a8463d3eba5cc7290a88eedd49b = L.circleMarker(
+                [6.5, 7.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_01ffca234f345100454e2d60eadbe849 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f3de6299fb842ff8578943fdcc462c34 = $(`<div id="html_f3de6299fb842ff8578943fdcc462c34" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Enugu State<br>         <b>Year:</b> 2020<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_01ffca234f345100454e2d60eadbe849.setContent(html_f3de6299fb842ff8578943fdcc462c34);
+            
+        
+
+        circle_marker_4ebf9a8463d3eba5cc7290a88eedd49b.bindPopup(popup_01ffca234f345100454e2d60eadbe849)
+        ;
+
+        
+    
+    
+            var circle_marker_9bb81d750ffee7dd93d11c1d716a1fa5 = L.circleMarker(
+                [7.7, 8.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163);
+        
+    
+        var popup_927d5b739c3b104fb76d15945ae25199 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1cad1926d51649883d8627d44e71da62 = $(`<div id="html_1cad1926d51649883d8627d44e71da62" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Benue State<br>         <b>Year:</b> 2020<br>         <b>Victims:</b> 3<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_927d5b739c3b104fb76d15945ae25199.setContent(html_1cad1926d51649883d8627d44e71da62);
+            
+        
+
+        circle_marker_9bb81d750ffee7dd93d11c1d716a1fa5.bindPopup(popup_927d5b739c3b104fb76d15945ae25199)
+        ;
+
+        
+    
+    
+            feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163.addTo(map_dfee61e92ed23e41706c91047e194803);
+        
+    
+            var feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a = L.featureGroup.subGroup(
+                feature_group_35bfe046d79bbec0e514b5ce1f26b4cf
+            );
+        
+    
+            var heat_map_155baf95a4a33c8945846cbdc2bb5d17 = L.heatLayer(
+                [[5.5, 5.7, 1.0], [11.2, 13.8, 1.0], [11.2, 13.7, 11.0], [8.1, 8.7, 1.0], [5.1, 8.3, 2.0], [6.8, 3.9, 2.0], [9.8, 7.9, 1.0], [5.4, 6.9, 2.0], [6.1, 6.5, 1.0], [6.1, 6.5, 2.0], [6.3, 7.6, 2.0], [4.7, 7.0, 1.0], [4.7, 7.0, 2.0], [4.7, 6.9, 2.0], [8.8, 11.3, 1.0], [5.5, 6.0, 1.0], [12.2, 7.3, 3.0], [12.2, 7.3, 3.0], [5.1, 6.6, 1.0], [9.9, 6.8, 1.0], [9.9, 8.8, 1.0], [9.0, 6.8, 6.0], [8.8, 6.8, 6.0], [6.1, 7.8, 1.0], [12.1, 5.4, 27.0], [11.0, 9.5, 1.0], [7.0, 3.6, 1.0], [12.4, 9.7, 1.0], [5.7, 7.0, 1.0], [4.9, 7.9, 6.0], [8.2, 10.5, 6.0], [8.7, 10.5, 6.0], [12.2, 6.8, 4.0], [12.2, 6.8, 4.0], [13.5, 6.3, 5.0], [6.3, 5.6, 1.0], [10.1, 6.4, 2.0], [11.6, 13.0, 1.0], [12.2, 6.4, 5.0], [9.3, 11.2, 5.0], [11.9, 6.9, 3.0], [6.8, 3.4, 2.0], [9.9, 6.8, 2.0], [13.0, 6.5, 5.0], [12.1, 5.1, 5.0], [6.2, 6.6, 2.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 13,
+  "radius": 15,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_155baf95a4a33c8945846cbdc2bb5d17.addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+            var circle_marker_38da98c92b0c28f12955a2c01643a4c3 = L.circleMarker(
+                [5.5, 5.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_229e8b062e8b5dea5b680a1eac55de5f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2ba78328cd1dbad62f9b3abf57b137da = $(`<div id="html_2ba78328cd1dbad62f9b3abf57b137da" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Delta State<br>         <b>Year:</b> 2025<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_229e8b062e8b5dea5b680a1eac55de5f.setContent(html_2ba78328cd1dbad62f9b3abf57b137da);
+            
+        
+
+        circle_marker_38da98c92b0c28f12955a2c01643a4c3.bindPopup(popup_229e8b062e8b5dea5b680a1eac55de5f)
+        ;
+
+        
+    
+    
+            var circle_marker_4620644ee39eaa61370d0abc464a9e23 = L.circleMarker(
+                [11.2, 13.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_b67da3075d780251ca9160da95b8e503 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fe3b8e38d53d8db7e98445d0f2985cb7 = $(`<div id="html_fe3b8e38d53d8db7e98445d0f2985cb7" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Borno State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_b67da3075d780251ca9160da95b8e503.setContent(html_fe3b8e38d53d8db7e98445d0f2985cb7);
+            
+        
+
+        circle_marker_4620644ee39eaa61370d0abc464a9e23.bindPopup(popup_b67da3075d780251ca9160da95b8e503)
+        ;
+
+        
+    
+    
+            var circle_marker_34006aea25e3e5dfca903ba485cb5373 = L.circleMarker(
+                [11.2, 13.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_6ca4f4e3acaac66f500e2e583f2cca8f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1f06b9e505a40e613e80d9851165e635 = $(`<div id="html_1f06b9e505a40e613e80d9851165e635" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Borno State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 11<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_6ca4f4e3acaac66f500e2e583f2cca8f.setContent(html_1f06b9e505a40e613e80d9851165e635);
+            
+        
+
+        circle_marker_34006aea25e3e5dfca903ba485cb5373.bindPopup(popup_6ca4f4e3acaac66f500e2e583f2cca8f)
+        ;
+
+        
+    
+    
+            var circle_marker_1ae71d27dc977698fe2c1f74481c5616 = L.circleMarker(
+                [8.1, 8.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_35cc8b19d9f0a872b3b63c78c6094dea = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3b8cc05af23b96fe7eec4274972c6625 = $(`<div id="html_3b8cc05af23b96fe7eec4274972c6625" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Nasarawa State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_35cc8b19d9f0a872b3b63c78c6094dea.setContent(html_3b8cc05af23b96fe7eec4274972c6625);
+            
+        
+
+        circle_marker_1ae71d27dc977698fe2c1f74481c5616.bindPopup(popup_35cc8b19d9f0a872b3b63c78c6094dea)
+        ;
+
+        
+    
+    
+            var circle_marker_e2dc1216a68cad7aefd27bf1027b27d2 = L.circleMarker(
+                [5.1, 8.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_b2cab4911a743893f9c7874331433040 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c7bd3b7cc6558c01bb3b8b4400f61501 = $(`<div id="html_c7bd3b7cc6558c01bb3b8b4400f61501" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Cross River State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_b2cab4911a743893f9c7874331433040.setContent(html_c7bd3b7cc6558c01bb3b8b4400f61501);
+            
+        
+
+        circle_marker_e2dc1216a68cad7aefd27bf1027b27d2.bindPopup(popup_b2cab4911a743893f9c7874331433040)
+        ;
+
+        
+    
+    
+            var circle_marker_6ac9d99e14086eb57bcda25ab19dd230 = L.circleMarker(
+                [6.8, 3.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_a7a44f5428b25599e9d46cfb32f271a2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2b13e9c9e9b4fd04275ead5d493b6cc9 = $(`<div id="html_2b13e9c9e9b4fd04275ead5d493b6cc9" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ogun State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Intimation         </div>`)[0];
+                popup_a7a44f5428b25599e9d46cfb32f271a2.setContent(html_2b13e9c9e9b4fd04275ead5d493b6cc9);
+            
+        
+
+        circle_marker_6ac9d99e14086eb57bcda25ab19dd230.bindPopup(popup_a7a44f5428b25599e9d46cfb32f271a2)
+        ;
+
+        
+    
+    
+            var circle_marker_730d23ffa291fdc76841f352ceb04b05 = L.circleMarker(
+                [9.8, 7.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_c3c6f651bfb866e5206ed74e965d3cdf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1023151b96bfbee78acb1f8f7090ccfb = $(`<div id="html_1023151b96bfbee78acb1f8f7090ccfb" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Kaduna State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_c3c6f651bfb866e5206ed74e965d3cdf.setContent(html_1023151b96bfbee78acb1f8f7090ccfb);
+            
+        
+
+        circle_marker_730d23ffa291fdc76841f352ceb04b05.bindPopup(popup_c3c6f651bfb866e5206ed74e965d3cdf)
+        ;
+
+        
+    
+    
+            var circle_marker_da1dfa26a506d49916833b5884c0fbff = L.circleMarker(
+                [5.4, 6.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_e8feea146284154dfa6c9fc5dd707c86 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9acf659e26d3278804de5cdafa8aba60 = $(`<div id="html_9acf659e26d3278804de5cdafa8aba60" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Imo State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Intimation         </div>`)[0];
+                popup_e8feea146284154dfa6c9fc5dd707c86.setContent(html_9acf659e26d3278804de5cdafa8aba60);
+            
+        
+
+        circle_marker_da1dfa26a506d49916833b5884c0fbff.bindPopup(popup_e8feea146284154dfa6c9fc5dd707c86)
+        ;
+
+        
+    
+    
+            var circle_marker_dc20325747d74d05064bc71d826478f0 = L.circleMarker(
+                [6.1, 6.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_ff1366003e9204c970f21b2c44bf835f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ca89eb1048bcd7183b2d5ddf53d81490 = $(`<div id="html_ca89eb1048bcd7183b2d5ddf53d81490" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Delta State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_ff1366003e9204c970f21b2c44bf835f.setContent(html_ca89eb1048bcd7183b2d5ddf53d81490);
+            
+        
+
+        circle_marker_dc20325747d74d05064bc71d826478f0.bindPopup(popup_ff1366003e9204c970f21b2c44bf835f)
+        ;
+
+        
+    
+    
+            var circle_marker_a3fd3a3465e4b1729673e74d3de1fc53 = L.circleMarker(
+                [6.1, 6.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_06465d3fd216fa4e6a4c2dbbe49eb764 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_74f679e6655e4995daf7be5590bb36cd = $(`<div id="html_74f679e6655e4995daf7be5590bb36cd" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Delta State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_06465d3fd216fa4e6a4c2dbbe49eb764.setContent(html_74f679e6655e4995daf7be5590bb36cd);
+            
+        
+
+        circle_marker_a3fd3a3465e4b1729673e74d3de1fc53.bindPopup(popup_06465d3fd216fa4e6a4c2dbbe49eb764)
+        ;
+
+        
+    
+    
+            var circle_marker_c18f6975e2aa561174c91200201badf9 = L.circleMarker(
+                [6.3, 7.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_94dbd96d105ccaa2ef2702cc13558c99 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f7f557b14712d6f5314018213cc942ee = $(`<div id="html_f7f557b14712d6f5314018213cc942ee" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Enugu State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Intimation         </div>`)[0];
+                popup_94dbd96d105ccaa2ef2702cc13558c99.setContent(html_f7f557b14712d6f5314018213cc942ee);
+            
+        
+
+        circle_marker_c18f6975e2aa561174c91200201badf9.bindPopup(popup_94dbd96d105ccaa2ef2702cc13558c99)
+        ;
+
+        
+    
+    
+            var circle_marker_775cb9d580b0e7996639fccb9d771dc8 = L.circleMarker(
+                [4.7, 7.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_36bb33ae109599ef87a915cdff4d75b1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d401c4224a3c2b09ff7122daa3420317 = $(`<div id="html_d401c4224a3c2b09ff7122daa3420317" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Rivers State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_36bb33ae109599ef87a915cdff4d75b1.setContent(html_d401c4224a3c2b09ff7122daa3420317);
+            
+        
+
+        circle_marker_775cb9d580b0e7996639fccb9d771dc8.bindPopup(popup_36bb33ae109599ef87a915cdff4d75b1)
+        ;
+
+        
+    
+    
+            var circle_marker_be5669fd58c6dce74c83ede0b090048e = L.circleMarker(
+                [4.7, 7.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_5bf202f32623198bf3257c8b18e94da4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5b08dc30db2c48d0106fe1185247b2b1 = $(`<div id="html_5b08dc30db2c48d0106fe1185247b2b1" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Rivers State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_5bf202f32623198bf3257c8b18e94da4.setContent(html_5b08dc30db2c48d0106fe1185247b2b1);
+            
+        
+
+        circle_marker_be5669fd58c6dce74c83ede0b090048e.bindPopup(popup_5bf202f32623198bf3257c8b18e94da4)
+        ;
+
+        
+    
+    
+            var circle_marker_c13fe4f483beb6ad0f1a358db491a740 = L.circleMarker(
+                [4.7, 6.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_83f815882ad803dca2a3080e594db532 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_40f981eac6c42cf1d4c658899e1ff2bc = $(`<div id="html_40f981eac6c42cf1d4c658899e1ff2bc" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Rivers State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_83f815882ad803dca2a3080e594db532.setContent(html_40f981eac6c42cf1d4c658899e1ff2bc);
+            
+        
+
+        circle_marker_c13fe4f483beb6ad0f1a358db491a740.bindPopup(popup_83f815882ad803dca2a3080e594db532)
+        ;
+
+        
+    
+    
+            var circle_marker_20f4e0600b732eb2f02036f980f86b6c = L.circleMarker(
+                [8.8, 11.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_e64dc8139996542320cc35b5443487a6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_25f9facf3145aa09f8f8976080afc056 = $(`<div id="html_25f9facf3145aa09f8f8976080afc056" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Taraba State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> No Information         </div>`)[0];
+                popup_e64dc8139996542320cc35b5443487a6.setContent(html_25f9facf3145aa09f8f8976080afc056);
+            
+        
+
+        circle_marker_20f4e0600b732eb2f02036f980f86b6c.bindPopup(popup_e64dc8139996542320cc35b5443487a6)
+        ;
+
+        
+    
+    
+            var circle_marker_7ae92a194e4d78c2f695cc1ab71c6972 = L.circleMarker(
+                [5.5, 6.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_87733ea8748a068a607fe529a83524f0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1eddf6aaee694ce3e4c24270744adfbc = $(`<div id="html_1eddf6aaee694ce3e4c24270744adfbc" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Delta State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_87733ea8748a068a607fe529a83524f0.setContent(html_1eddf6aaee694ce3e4c24270744adfbc);
+            
+        
+
+        circle_marker_7ae92a194e4d78c2f695cc1ab71c6972.bindPopup(popup_87733ea8748a068a607fe529a83524f0)
+        ;
+
+        
+    
+    
+            var circle_marker_011366ecccf7cd1f0cba43207bc6eacb = L.circleMarker(
+                [12.2, 7.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_338754fbefbbee255ec5bf469f7b18e7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eccb7f431f07660b2f1321f59428d002 = $(`<div id="html_eccb7f431f07660b2f1321f59428d002" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Katsina State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 3<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_338754fbefbbee255ec5bf469f7b18e7.setContent(html_eccb7f431f07660b2f1321f59428d002);
+            
+        
+
+        circle_marker_011366ecccf7cd1f0cba43207bc6eacb.bindPopup(popup_338754fbefbbee255ec5bf469f7b18e7)
+        ;
+
+        
+    
+    
+            var circle_marker_3fd68c27d49fdef205a857d859e7321b = L.circleMarker(
+                [12.2, 7.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_c83013090ad9a474a409c218ef76b09d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_752777e4956971031fbfca6193356bbb = $(`<div id="html_752777e4956971031fbfca6193356bbb" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Katsina State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 3<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_c83013090ad9a474a409c218ef76b09d.setContent(html_752777e4956971031fbfca6193356bbb);
+            
+        
+
+        circle_marker_3fd68c27d49fdef205a857d859e7321b.bindPopup(popup_c83013090ad9a474a409c218ef76b09d)
+        ;
+
+        
+    
+    
+            var circle_marker_5585b1b1463ce8671f39bf740fe505ac = L.circleMarker(
+                [5.1, 6.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_310f85a87f2ffabfc6edf78f2ea82f47 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_528a634ac6fc1340b487898e0d95af04 = $(`<div id="html_528a634ac6fc1340b487898e0d95af04" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Rivers State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_310f85a87f2ffabfc6edf78f2ea82f47.setContent(html_528a634ac6fc1340b487898e0d95af04);
+            
+        
+
+        circle_marker_5585b1b1463ce8671f39bf740fe505ac.bindPopup(popup_310f85a87f2ffabfc6edf78f2ea82f47)
+        ;
+
+        
+    
+    
+            var circle_marker_8148b8b4c03a1cc696220946800caf31 = L.circleMarker(
+                [9.9, 6.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_e814da2ee1acade8151697b8c5f61016 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e09e49ef32b6c384118bd5b22c2696df = $(`<div id="html_e09e49ef32b6c384118bd5b22c2696df" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Niger State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_e814da2ee1acade8151697b8c5f61016.setContent(html_e09e49ef32b6c384118bd5b22c2696df);
+            
+        
+
+        circle_marker_8148b8b4c03a1cc696220946800caf31.bindPopup(popup_e814da2ee1acade8151697b8c5f61016)
+        ;
+
+        
+    
+    
+            var circle_marker_7c5629a9338cf1b09f923ba58b0cd2e1 = L.circleMarker(
+                [9.9, 8.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_7af4e16b61e9c29290a9225baae1f81d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b19f2473ea969bc283f10ba9322d2f8a = $(`<div id="html_b19f2473ea969bc283f10ba9322d2f8a" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Plateau State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_7af4e16b61e9c29290a9225baae1f81d.setContent(html_b19f2473ea969bc283f10ba9322d2f8a);
+            
+        
+
+        circle_marker_7c5629a9338cf1b09f923ba58b0cd2e1.bindPopup(popup_7af4e16b61e9c29290a9225baae1f81d)
+        ;
+
+        
+    
+    
+            var circle_marker_5eb02d6d49bb43fba6bff0abbd809115 = L.circleMarker(
+                [9.0, 6.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_790fb69aa1ed71a375cff95d21500a99 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_582c8e3190bee664ce5afbf7dd0156d9 = $(`<div id="html_582c8e3190bee664ce5afbf7dd0156d9" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Federal Capital Territory<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 6<br>         <b>Assault Type:</b> No Information         </div>`)[0];
+                popup_790fb69aa1ed71a375cff95d21500a99.setContent(html_582c8e3190bee664ce5afbf7dd0156d9);
+            
+        
+
+        circle_marker_5eb02d6d49bb43fba6bff0abbd809115.bindPopup(popup_790fb69aa1ed71a375cff95d21500a99)
+        ;
+
+        
+    
+    
+            var circle_marker_c65e4fbebc46d0de16942a6cdbf927d9 = L.circleMarker(
+                [8.8, 6.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_807440f74b95357fe4abf5640c1fa5f4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2bbc4688f13842f4c90a6ab18fc35df6 = $(`<div id="html_2bbc4688f13842f4c90a6ab18fc35df6" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Federal Capital Territory<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 6<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_807440f74b95357fe4abf5640c1fa5f4.setContent(html_2bbc4688f13842f4c90a6ab18fc35df6);
+            
+        
+
+        circle_marker_c65e4fbebc46d0de16942a6cdbf927d9.bindPopup(popup_807440f74b95357fe4abf5640c1fa5f4)
+        ;
+
+        
+    
+    
+            var circle_marker_d6528f27b1f14ac60f990537798f9df8 = L.circleMarker(
+                [6.1, 7.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_83f7ccd025ef93ceb0ae706ebff86fe9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_280e6d7d184e37430fd05f0ad2971b5a = $(`<div id="html_280e6d7d184e37430fd05f0ad2971b5a" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ebonyi State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_83f7ccd025ef93ceb0ae706ebff86fe9.setContent(html_280e6d7d184e37430fd05f0ad2971b5a);
+            
+        
+
+        circle_marker_d6528f27b1f14ac60f990537798f9df8.bindPopup(popup_83f7ccd025ef93ceb0ae706ebff86fe9)
+        ;
+
+        
+    
+    
+            var circle_marker_4a84760cee70c7969d201e5b92acd945 = L.circleMarker(
+                [12.1, 5.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_1a6cf658527ddb28b3cc7473370d7125 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_949e769ab6ad5eb901fef5d6765c1f1b = $(`<div id="html_949e769ab6ad5eb901fef5d6765c1f1b" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Zamfara State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 27<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_1a6cf658527ddb28b3cc7473370d7125.setContent(html_949e769ab6ad5eb901fef5d6765c1f1b);
+            
+        
+
+        circle_marker_4a84760cee70c7969d201e5b92acd945.bindPopup(popup_1a6cf658527ddb28b3cc7473370d7125)
+        ;
+
+        
+    
+    
+            var circle_marker_e4df94cb114f480e909e3606085ab69a = L.circleMarker(
+                [11.0, 9.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_8dddace4ff9be8e9eeef0d1ba3985ce9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eb36f9e295241bf2b9ba623d440a720a = $(`<div id="html_eb36f9e295241bf2b9ba623d440a720a" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Bauchi State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_8dddace4ff9be8e9eeef0d1ba3985ce9.setContent(html_eb36f9e295241bf2b9ba623d440a720a);
+            
+        
+
+        circle_marker_e4df94cb114f480e909e3606085ab69a.bindPopup(popup_8dddace4ff9be8e9eeef0d1ba3985ce9)
+        ;
+
+        
+    
+    
+            var circle_marker_00bed44c58c50503a2768bdfa8723678 = L.circleMarker(
+                [7.0, 3.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_dd71484f35444a5dda3459199de23cb8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7100110f142cc8b5314c0a74797d1c0b = $(`<div id="html_7100110f142cc8b5314c0a74797d1c0b" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ogun State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> No Information         </div>`)[0];
+                popup_dd71484f35444a5dda3459199de23cb8.setContent(html_7100110f142cc8b5314c0a74797d1c0b);
+            
+        
+
+        circle_marker_00bed44c58c50503a2768bdfa8723678.bindPopup(popup_dd71484f35444a5dda3459199de23cb8)
+        ;
+
+        
+    
+    
+            var circle_marker_ccb800e0ba6f65af0b6d0ad725097410 = L.circleMarker(
+                [12.4, 9.7],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_04908af620ab18b9785bb97f262103d9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f8624146564661fe6e4bcf6ed2aa8598 = $(`<div id="html_f8624146564661fe6e4bcf6ed2aa8598" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Jigawa State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_04908af620ab18b9785bb97f262103d9.setContent(html_f8624146564661fe6e4bcf6ed2aa8598);
+            
+        
+
+        circle_marker_ccb800e0ba6f65af0b6d0ad725097410.bindPopup(popup_04908af620ab18b9785bb97f262103d9)
+        ;
+
+        
+    
+    
+            var circle_marker_9ddd9671fef6fdf1ebcfe19fad137847 = L.circleMarker(
+                [5.7, 7.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_7ba6d2597d17f18d897b763619cda9cd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5c46f29b389b09abfcb87476b0da24cb = $(`<div id="html_5c46f29b389b09abfcb87476b0da24cb" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Imo State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_7ba6d2597d17f18d897b763619cda9cd.setContent(html_5c46f29b389b09abfcb87476b0da24cb);
+            
+        
+
+        circle_marker_9ddd9671fef6fdf1ebcfe19fad137847.bindPopup(popup_7ba6d2597d17f18d897b763619cda9cd)
+        ;
+
+        
+    
+    
+            var circle_marker_9b7e4e879d614781b66e63408654fb4e = L.circleMarker(
+                [4.9, 7.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_c9548c3a154f904548dfa245c153104a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fb564f6f8197c2c40477323e216c753f = $(`<div id="html_fb564f6f8197c2c40477323e216c753f" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Akwa Ibom State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 6<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_c9548c3a154f904548dfa245c153104a.setContent(html_fb564f6f8197c2c40477323e216c753f);
+            
+        
+
+        circle_marker_9b7e4e879d614781b66e63408654fb4e.bindPopup(popup_c9548c3a154f904548dfa245c153104a)
+        ;
+
+        
+    
+    
+            var circle_marker_d0b46bf9f70112bea93f121283897193 = L.circleMarker(
+                [8.2, 10.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_17c10e75b4990197a586430630ba9897 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3409f8c4389b9d172c93f9323ccaa8fe = $(`<div id="html_3409f8c4389b9d172c93f9323ccaa8fe" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Taraba State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 6<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_17c10e75b4990197a586430630ba9897.setContent(html_3409f8c4389b9d172c93f9323ccaa8fe);
+            
+        
+
+        circle_marker_d0b46bf9f70112bea93f121283897193.bindPopup(popup_17c10e75b4990197a586430630ba9897)
+        ;
+
+        
+    
+    
+            var circle_marker_0ca79bcad0bfc952cc7e1ded05a0476b = L.circleMarker(
+                [8.7, 10.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_a6cf0812ce04d1799b58d68460a6c954 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e60980c8a0e1c0a5f11d1dcc4029b32f = $(`<div id="html_e60980c8a0e1c0a5f11d1dcc4029b32f" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Taraba State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 6<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_a6cf0812ce04d1799b58d68460a6c954.setContent(html_e60980c8a0e1c0a5f11d1dcc4029b32f);
+            
+        
+
+        circle_marker_0ca79bcad0bfc952cc7e1ded05a0476b.bindPopup(popup_a6cf0812ce04d1799b58d68460a6c954)
+        ;
+
+        
+    
+    
+            var circle_marker_934c201ed955cff9898cb3794102c5b7 = L.circleMarker(
+                [12.2, 6.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_fe115333e54b07aff039e6b82e73b427 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_48dbd7f89db089829ba9c6f5e92f5cde = $(`<div id="html_48dbd7f89db089829ba9c6f5e92f5cde" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Zamfara State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 4<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_fe115333e54b07aff039e6b82e73b427.setContent(html_48dbd7f89db089829ba9c6f5e92f5cde);
+            
+        
+
+        circle_marker_934c201ed955cff9898cb3794102c5b7.bindPopup(popup_fe115333e54b07aff039e6b82e73b427)
+        ;
+
+        
+    
+    
+            var circle_marker_133c1879ebdca0cede9f9c7e5f22ee2f = L.circleMarker(
+                [12.2, 6.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_c5f0be9a6773f57b9991d49fd4018344 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_51dfc11720e34917aee31a8fd2dcf87d = $(`<div id="html_51dfc11720e34917aee31a8fd2dcf87d" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Zamfara State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 4<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_c5f0be9a6773f57b9991d49fd4018344.setContent(html_51dfc11720e34917aee31a8fd2dcf87d);
+            
+        
+
+        circle_marker_133c1879ebdca0cede9f9c7e5f22ee2f.bindPopup(popup_c5f0be9a6773f57b9991d49fd4018344)
+        ;
+
+        
+    
+    
+            var circle_marker_5a030452294e4be7758a69845e91cf56 = L.circleMarker(
+                [13.5, 6.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_01316591fa1dab98e5a9247ba5bfb3f7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_08a51d9307539d8edda583fef16ea591 = $(`<div id="html_08a51d9307539d8edda583fef16ea591" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Sokoto State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 5<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_01316591fa1dab98e5a9247ba5bfb3f7.setContent(html_08a51d9307539d8edda583fef16ea591);
+            
+        
+
+        circle_marker_5a030452294e4be7758a69845e91cf56.bindPopup(popup_01316591fa1dab98e5a9247ba5bfb3f7)
+        ;
+
+        
+    
+    
+            var circle_marker_43d4a3aa5796e803cb1de631a881ee2a = L.circleMarker(
+                [6.3, 5.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_1e80650645c2964db8815d9fc188dcaf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9f26d80a02fa30722251df8663cb2119 = $(`<div id="html_9f26d80a02fa30722251df8663cb2119" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Edo State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Intimation         </div>`)[0];
+                popup_1e80650645c2964db8815d9fc188dcaf.setContent(html_9f26d80a02fa30722251df8663cb2119);
+            
+        
+
+        circle_marker_43d4a3aa5796e803cb1de631a881ee2a.bindPopup(popup_1e80650645c2964db8815d9fc188dcaf)
+        ;
+
+        
+    
+    
+            var circle_marker_60faefd0ba243ad115d69b8f47c15814 = L.circleMarker(
+                [10.1, 6.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_6ed85ac392991e59007478354453bb23 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_639eaf04170c535b07db02df80e6f6e0 = $(`<div id="html_639eaf04170c535b07db02df80e6f6e0" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Niger State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_6ed85ac392991e59007478354453bb23.setContent(html_639eaf04170c535b07db02df80e6f6e0);
+            
+        
+
+        circle_marker_60faefd0ba243ad115d69b8f47c15814.bindPopup(popup_6ed85ac392991e59007478354453bb23)
+        ;
+
+        
+    
+    
+            var circle_marker_11be1c069b71cf8451858fffb09d2ad8 = L.circleMarker(
+                [11.6, 13.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_71f24594ccf4153427ac7dce1ac760f7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_23a13ddba2fa404fc1ccd6076b1fef99 = $(`<div id="html_23a13ddba2fa404fc1ccd6076b1fef99" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Borno State<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_71f24594ccf4153427ac7dce1ac760f7.setContent(html_23a13ddba2fa404fc1ccd6076b1fef99);
+            
+        
+
+        circle_marker_11be1c069b71cf8451858fffb09d2ad8.bindPopup(popup_71f24594ccf4153427ac7dce1ac760f7)
+        ;
+
+        
+    
+    
+            var circle_marker_43788552846f478105e500bb5662a3ae = L.circleMarker(
+                [12.2, 6.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_77d3a3628854ce4c9827abbfe0176a3d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0cb20eb4ebec4db3cbd2e91ba9188e29 = $(`<div id="html_0cb20eb4ebec4db3cbd2e91ba9188e29" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Zamfara State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 5<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_77d3a3628854ce4c9827abbfe0176a3d.setContent(html_0cb20eb4ebec4db3cbd2e91ba9188e29);
+            
+        
+
+        circle_marker_43788552846f478105e500bb5662a3ae.bindPopup(popup_77d3a3628854ce4c9827abbfe0176a3d)
+        ;
+
+        
+    
+    
+            var circle_marker_1aefbedb5892e1be12d8dc85ef20c346 = L.circleMarker(
+                [9.3, 11.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_d24a4c9c8eda2b3010228132bea1d692 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e2eff86f6f04c48264a147a817ab175a = $(`<div id="html_e2eff86f6f04c48264a147a817ab175a" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Taraba State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 5<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_d24a4c9c8eda2b3010228132bea1d692.setContent(html_e2eff86f6f04c48264a147a817ab175a);
+            
+        
+
+        circle_marker_1aefbedb5892e1be12d8dc85ef20c346.bindPopup(popup_d24a4c9c8eda2b3010228132bea1d692)
+        ;
+
+        
+    
+    
+            var circle_marker_879774edfc0711b53e1ce0c1125a5b63 = L.circleMarker(
+                [11.9, 6.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_7a1f80308e122205b2ce5d403bde891e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_298543684baf449fd3b325956c28e58b = $(`<div id="html_298543684baf449fd3b325956c28e58b" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Zamfara State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 3<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_7a1f80308e122205b2ce5d403bde891e.setContent(html_298543684baf449fd3b325956c28e58b);
+            
+        
+
+        circle_marker_879774edfc0711b53e1ce0c1125a5b63.bindPopup(popup_7a1f80308e122205b2ce5d403bde891e)
+        ;
+
+        
+    
+    
+            var circle_marker_b22b0abef030499baea4c2aae36c80e3 = L.circleMarker(
+                [6.8, 3.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_8eccfde384e0cab42ea8b630649a74d5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d43832d2505f145884fdbaa0195bccf5 = $(`<div id="html_d43832d2505f145884fdbaa0195bccf5" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ogun State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_8eccfde384e0cab42ea8b630649a74d5.setContent(html_d43832d2505f145884fdbaa0195bccf5);
+            
+        
+
+        circle_marker_b22b0abef030499baea4c2aae36c80e3.bindPopup(popup_8eccfde384e0cab42ea8b630649a74d5)
+        ;
+
+        
+    
+    
+            var circle_marker_27607e7d85260d7cee2d547c4896df2b = L.circleMarker(
+                [9.9, 6.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_ff5c03278b9ddd5fdee0a18db6727811 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_80e9868828543ba02dfe7eb52518b9a1 = $(`<div id="html_80e9868828543ba02dfe7eb52518b9a1" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Niger State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Not Applicable         </div>`)[0];
+                popup_ff5c03278b9ddd5fdee0a18db6727811.setContent(html_80e9868828543ba02dfe7eb52518b9a1);
+            
+        
+
+        circle_marker_27607e7d85260d7cee2d547c4896df2b.bindPopup(popup_ff5c03278b9ddd5fdee0a18db6727811)
+        ;
+
+        
+    
+    
+            var circle_marker_fd65a04c9720d63ff533428b016a10d1 = L.circleMarker(
+                [13.0, 6.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_7f3a7ffea481c7bd910588d2dbe37a31 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c2dd6b08536cd0241db6b80fbd40138d = $(`<div id="html_c2dd6b08536cd0241db6b80fbd40138d" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Zamfara State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 5<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_7f3a7ffea481c7bd910588d2dbe37a31.setContent(html_c2dd6b08536cd0241db6b80fbd40138d);
+            
+        
+
+        circle_marker_fd65a04c9720d63ff533428b016a10d1.bindPopup(popup_7f3a7ffea481c7bd910588d2dbe37a31)
+        ;
+
+        
+    
+    
+            var circle_marker_6d5b520299f0a063f31d0b9884907f42 = L.circleMarker(
+                [12.1, 5.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_a7264ce68c9050746b76fc2ed5c27f9d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e5207bdf11d9397ee21654782ee0ea31 = $(`<div id="html_e5207bdf11d9397ee21654782ee0ea31" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Zamfara State<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 5<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_a7264ce68c9050746b76fc2ed5c27f9d.setContent(html_e5207bdf11d9397ee21654782ee0ea31);
+            
+        
+
+        circle_marker_6d5b520299f0a063f31d0b9884907f42.bindPopup(popup_a7264ce68c9050746b76fc2ed5c27f9d)
+        ;
+
+        
+    
+    
+            var circle_marker_8e9dd5559f5d4e061e9ce6f45b18a9ce = L.circleMarker(
+                [6.2, 6.6],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a);
+        
+    
+        var popup_30b4bfd30417abdcb4a43876696abafc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e180aade47017158b81a9356e06ba223 = $(`<div id="html_e180aade47017158b81a9356e06ba223" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Delta State<br>         <b>Year:</b> 2020<br>         <b>Victims:</b> 2<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_30b4bfd30417abdcb4a43876696abafc.setContent(html_e180aade47017158b81a9356e06ba223);
+            
+        
+
+        circle_marker_8e9dd5559f5d4e061e9ce6f45b18a9ce.bindPopup(popup_30b4bfd30417abdcb4a43876696abafc)
+        ;
+
+        
+    
+    
+            feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a.addTo(map_dfee61e92ed23e41706c91047e194803);
+        
+    
+            var feature_group_sub_group_dcb4fce3b56c2c6a867f71e9f345f4d3 = L.featureGroup.subGroup(
+                feature_group_35bfe046d79bbec0e514b5ce1f26b4cf
+            );
+        
+    
+            var heat_map_1482d33f95cb66cfc58b61684b311e59 = L.heatLayer(
+                [[5.5, 6.0, 1.0], [5.3, 7.4, 1.0], [8.4, 6.9, 6.0], [8.9, 7.3, 1.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 13,
+  "radius": 15,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_1482d33f95cb66cfc58b61684b311e59.addTo(feature_group_sub_group_dcb4fce3b56c2c6a867f71e9f345f4d3);
+        
+    
+            var circle_marker_36430e57b44d37925bbc9d9caeef61cf = L.circleMarker(
+                [5.5, 6.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_dcb4fce3b56c2c6a867f71e9f345f4d3);
+        
+    
+        var popup_425a21abacceecb358a2db4af4b2da13 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_eefadcb0b9305cdd942d1a37ec8dbf5b = $(`<div id="html_eefadcb0b9305cdd942d1a37ec8dbf5b" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Delta State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_425a21abacceecb358a2db4af4b2da13.setContent(html_eefadcb0b9305cdd942d1a37ec8dbf5b);
+            
+        
+
+        circle_marker_36430e57b44d37925bbc9d9caeef61cf.bindPopup(popup_425a21abacceecb358a2db4af4b2da13)
+        ;
+
+        
+    
+    
+            var circle_marker_5343ff1977f9c624b3ac3297d9dfa1ba = L.circleMarker(
+                [5.3, 7.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_dcb4fce3b56c2c6a867f71e9f345f4d3);
+        
+    
+        var popup_d6e36d40e30743e3dc64d2db833f6117 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_60517ed7963c7e359a078e827b504d35 = $(`<div id="html_60517ed7963c7e359a078e827b504d35" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Abia State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_d6e36d40e30743e3dc64d2db833f6117.setContent(html_60517ed7963c7e359a078e827b504d35);
+            
+        
+
+        circle_marker_5343ff1977f9c624b3ac3297d9dfa1ba.bindPopup(popup_d6e36d40e30743e3dc64d2db833f6117)
+        ;
+
+        
+    
+    
+            var circle_marker_c592a59b23d7d8c5e5832e3be54c515b = L.circleMarker(
+                [8.4, 6.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_dcb4fce3b56c2c6a867f71e9f345f4d3);
+        
+    
+        var popup_10b393dbf32fee0f9253f7c5ac37e25e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_33423f3b491496810e85d1d4e4a4f9e4 = $(`<div id="html_33423f3b491496810e85d1d4e4a4f9e4" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Federal Capital Territory<br>         <b>Year:</b> 2022<br>         <b>Victims:</b> 6<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_10b393dbf32fee0f9253f7c5ac37e25e.setContent(html_33423f3b491496810e85d1d4e4a4f9e4);
+            
+        
+
+        circle_marker_c592a59b23d7d8c5e5832e3be54c515b.bindPopup(popup_10b393dbf32fee0f9253f7c5ac37e25e)
+        ;
+
+        
+    
+    
+            var circle_marker_2d8caec794ae57db9ef371bd55fd412c = L.circleMarker(
+                [8.9, 7.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_dcb4fce3b56c2c6a867f71e9f345f4d3);
+        
+    
+        var popup_6f0cf87adcd007118b943db40394a841 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6c1c0ddba663ddbb53a80fcee764fc9a = $(`<div id="html_6c1c0ddba663ddbb53a80fcee764fc9a" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Federal Capital Territory<br>         <b>Year:</b> 2021<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Gang SV AssaultGang SV Assault         </div>`)[0];
+                popup_6f0cf87adcd007118b943db40394a841.setContent(html_6c1c0ddba663ddbb53a80fcee764fc9a);
+            
+        
+
+        circle_marker_2d8caec794ae57db9ef371bd55fd412c.bindPopup(popup_6f0cf87adcd007118b943db40394a841)
+        ;
+
+        
+    
+    
+            feature_group_sub_group_dcb4fce3b56c2c6a867f71e9f345f4d3.addTo(map_dfee61e92ed23e41706c91047e194803);
+        
+    
+            var feature_group_sub_group_698705bb9803255cda77a2dc1d7b93dc = L.featureGroup.subGroup(
+                feature_group_35bfe046d79bbec0e514b5ce1f26b4cf
+            );
+        
+    
+            var heat_map_ff30caf1784861705c8fadafadaefe6f = L.heatLayer(
+                [[6.6, 5.9, 1.0], [6.5, 3.4, 1.0], [6.9, 3.9, 1.0], [6.9, 3.9, 1.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 13,
+  "radius": 15,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_ff30caf1784861705c8fadafadaefe6f.addTo(feature_group_sub_group_698705bb9803255cda77a2dc1d7b93dc);
+        
+    
+            var circle_marker_60ce887521f46b1f2f431b813b270f1b = L.circleMarker(
+                [6.6, 5.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_698705bb9803255cda77a2dc1d7b93dc);
+        
+    
+        var popup_b70e781f4c5eb4a4085b16d1b2f2fe0b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0ac7e1869ab0c97d10cdeed509165071 = $(`<div id="html_0ac7e1869ab0c97d10cdeed509165071" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Edo State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_b70e781f4c5eb4a4085b16d1b2f2fe0b.setContent(html_0ac7e1869ab0c97d10cdeed509165071);
+            
+        
+
+        circle_marker_60ce887521f46b1f2f431b813b270f1b.bindPopup(popup_b70e781f4c5eb4a4085b16d1b2f2fe0b)
+        ;
+
+        
+    
+    
+            var circle_marker_feaf8750f3fc8430ce5c168b290d6321 = L.circleMarker(
+                [6.5, 3.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_698705bb9803255cda77a2dc1d7b93dc);
+        
+    
+        var popup_3bb8206d0d99d9c3676d5ab210870160 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_652f6f67e9f9cb79342ef55167d66de7 = $(`<div id="html_652f6f67e9f9cb79342ef55167d66de7" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Lagos State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_3bb8206d0d99d9c3676d5ab210870160.setContent(html_652f6f67e9f9cb79342ef55167d66de7);
+            
+        
+
+        circle_marker_feaf8750f3fc8430ce5c168b290d6321.bindPopup(popup_3bb8206d0d99d9c3676d5ab210870160)
+        ;
+
+        
+    
+    
+            var circle_marker_6b9e3cfdbd88220b3e0e3a5de20915f7 = L.circleMarker(
+                [6.9, 3.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_698705bb9803255cda77a2dc1d7b93dc);
+        
+    
+        var popup_3df11da67208b2f204d0fee5d18f51b4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7d2dabf1321a2b2103793a5292bcc567 = $(`<div id="html_7d2dabf1321a2b2103793a5292bcc567" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ogun State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Not Applicable         </div>`)[0];
+                popup_3df11da67208b2f204d0fee5d18f51b4.setContent(html_7d2dabf1321a2b2103793a5292bcc567);
+            
+        
+
+        circle_marker_6b9e3cfdbd88220b3e0e3a5de20915f7.bindPopup(popup_3df11da67208b2f204d0fee5d18f51b4)
+        ;
+
+        
+    
+    
+            var circle_marker_d46612f3cc443cb75641c01560e690b0 = L.circleMarker(
+                [6.9, 3.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_698705bb9803255cda77a2dc1d7b93dc);
+        
+    
+        var popup_778dd6e30b0e24e2db359fb17655986c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_59e7127c3cf83abb9b46f4fb1f0d85ee = $(`<div id="html_59e7127c3cf83abb9b46f4fb1f0d85ee" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ogun State<br>         <b>Year:</b> 2024<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Not Applicable         </div>`)[0];
+                popup_778dd6e30b0e24e2db359fb17655986c.setContent(html_59e7127c3cf83abb9b46f4fb1f0d85ee);
+            
+        
+
+        circle_marker_d46612f3cc443cb75641c01560e690b0.bindPopup(popup_778dd6e30b0e24e2db359fb17655986c)
+        ;
+
+        
+    
+    
+            feature_group_sub_group_698705bb9803255cda77a2dc1d7b93dc.addTo(map_dfee61e92ed23e41706c91047e194803);
+        
+    
+            var feature_group_sub_group_d01387f3ec5db1159fde5c1fc37d1ce7 = L.featureGroup.subGroup(
+                feature_group_35bfe046d79bbec0e514b5ce1f26b4cf
+            );
+        
+    
+            var heat_map_5df91869115f3b99097a345728557cb9 = L.heatLayer(
+                [[11.8, 13.1, 1.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 13,
+  "radius": 15,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_5df91869115f3b99097a345728557cb9.addTo(feature_group_sub_group_d01387f3ec5db1159fde5c1fc37d1ce7);
+        
+    
+            var circle_marker_6b014e82d6b3a68e59e500cb960c4ecf = L.circleMarker(
+                [11.8, 13.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_d01387f3ec5db1159fde5c1fc37d1ce7);
+        
+    
+        var popup_791118d6d6b05a32126abfdaecde7818 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4ab20b3e99502ae0dcf55b78460b902b = $(`<div id="html_4ab20b3e99502ae0dcf55b78460b902b" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Borno State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_791118d6d6b05a32126abfdaecde7818.setContent(html_4ab20b3e99502ae0dcf55b78460b902b);
+            
+        
+
+        circle_marker_6b014e82d6b3a68e59e500cb960c4ecf.bindPopup(popup_791118d6d6b05a32126abfdaecde7818)
+        ;
+
+        
+    
+    
+            feature_group_sub_group_d01387f3ec5db1159fde5c1fc37d1ce7.addTo(map_dfee61e92ed23e41706c91047e194803);
+        
+    
+            var feature_group_sub_group_7c155f34ff63edc516f578d3cf9fdb35 = L.featureGroup.subGroup(
+                feature_group_35bfe046d79bbec0e514b5ce1f26b4cf
+            );
+        
+    
+            var heat_map_b87c67761fca0b78040f48a6348f720f = L.heatLayer(
+                [[6.8, 3.9, 4.0], [7.6, 5.2, 1.0], [6.2, 7.1, 9.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 13,
+  "radius": 15,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_b87c67761fca0b78040f48a6348f720f.addTo(feature_group_sub_group_7c155f34ff63edc516f578d3cf9fdb35);
+        
+    
+            var circle_marker_16a7b28ce69218394ecbc75d7a9efe9a = L.circleMarker(
+                [6.8, 3.9],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_7c155f34ff63edc516f578d3cf9fdb35);
+        
+    
+        var popup_8772568ca3dd87c1a645bdb3b6d7e7c6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_911a5c5ed7417801cd237832c97fa6e6 = $(`<div id="html_911a5c5ed7417801cd237832c97fa6e6" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ogun State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 4<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_8772568ca3dd87c1a645bdb3b6d7e7c6.setContent(html_911a5c5ed7417801cd237832c97fa6e6);
+            
+        
+
+        circle_marker_16a7b28ce69218394ecbc75d7a9efe9a.bindPopup(popup_8772568ca3dd87c1a645bdb3b6d7e7c6)
+        ;
+
+        
+    
+    
+            var circle_marker_b2d24433d3edd816d246b96f8a2810e8 = L.circleMarker(
+                [7.6, 5.2],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_7c155f34ff63edc516f578d3cf9fdb35);
+        
+    
+        var popup_325d4b16959a55ef1376f64a787c8f46 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_07426ca3436a6f42857b6cd12bc7eeb7 = $(`<div id="html_07426ca3436a6f42857b6cd12bc7eeb7" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ekiti State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Intimation         </div>`)[0];
+                popup_325d4b16959a55ef1376f64a787c8f46.setContent(html_07426ca3436a6f42857b6cd12bc7eeb7);
+            
+        
+
+        circle_marker_b2d24433d3edd816d246b96f8a2810e8.bindPopup(popup_325d4b16959a55ef1376f64a787c8f46)
+        ;
+
+        
+    
+    
+            var circle_marker_e9540eb6e166f1e8ab12bdad211d1533 = L.circleMarker(
+                [6.2, 7.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_7c155f34ff63edc516f578d3cf9fdb35);
+        
+    
+        var popup_91d0fddfe19148bf641255fe271d995e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e2b74e2874c5660a1497598dadaa91c7 = $(`<div id="html_e2b74e2874c5660a1497598dadaa91c7" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Anambra State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 9<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_91d0fddfe19148bf641255fe271d995e.setContent(html_e2b74e2874c5660a1497598dadaa91c7);
+            
+        
+
+        circle_marker_e9540eb6e166f1e8ab12bdad211d1533.bindPopup(popup_91d0fddfe19148bf641255fe271d995e)
+        ;
+
+        
+    
+    
+            feature_group_sub_group_7c155f34ff63edc516f578d3cf9fdb35.addTo(map_dfee61e92ed23e41706c91047e194803);
+        
+    
+            var feature_group_sub_group_2187762a5c5b2dfc712a2b0127233b90 = L.featureGroup.subGroup(
+                feature_group_35bfe046d79bbec0e514b5ce1f26b4cf
+            );
+        
+    
+            var heat_map_676ad0dc39af5d95563cd8aff0229ce8 = L.heatLayer(
+                [[6.5, 3.3, 1.0], [8.4, 4.5, 1.0], [6.5, 3.4, 1.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 13,
+  "radius": 15,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_676ad0dc39af5d95563cd8aff0229ce8.addTo(feature_group_sub_group_2187762a5c5b2dfc712a2b0127233b90);
+        
+    
+            var circle_marker_d3ad4360dce18008640dd6c34fc95c12 = L.circleMarker(
+                [6.5, 3.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_2187762a5c5b2dfc712a2b0127233b90);
+        
+    
+        var popup_dd13b4f45994e4af03ca24b1375d6b7c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9b0da3f7bd9cd5b41637e9cafa7bbd3f = $(`<div id="html_9b0da3f7bd9cd5b41637e9cafa7bbd3f" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Lagos State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_dd13b4f45994e4af03ca24b1375d6b7c.setContent(html_9b0da3f7bd9cd5b41637e9cafa7bbd3f);
+            
+        
+
+        circle_marker_d3ad4360dce18008640dd6c34fc95c12.bindPopup(popup_dd13b4f45994e4af03ca24b1375d6b7c)
+        ;
+
+        
+    
+    
+            var circle_marker_2a4ecd57b75d0e138d7b99ea147dc294 = L.circleMarker(
+                [8.4, 4.5],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_2187762a5c5b2dfc712a2b0127233b90);
+        
+    
+        var popup_e68140b42e23e3b087f47a288b1ff3a9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a63bea4bcd2e056ae55a26970d153fcb = $(`<div id="html_a63bea4bcd2e056ae55a26970d153fcb" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Kwara State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_e68140b42e23e3b087f47a288b1ff3a9.setContent(html_a63bea4bcd2e056ae55a26970d153fcb);
+            
+        
+
+        circle_marker_2a4ecd57b75d0e138d7b99ea147dc294.bindPopup(popup_e68140b42e23e3b087f47a288b1ff3a9)
+        ;
+
+        
+    
+    
+            var circle_marker_ddc5803b09ea68837d22ab95ba54fdcb = L.circleMarker(
+                [6.5, 3.4],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_2187762a5c5b2dfc712a2b0127233b90);
+        
+    
+        var popup_83addacfbc6112ed1bcdfdcd8af0e4e4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_936860756e6481b4838dc58d5e073339 = $(`<div id="html_936860756e6481b4838dc58d5e073339" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Ogun State<br>         <b>Year:</b> 2020<br>         <b>Victims:</b> 1<br>         <b>Assault Type:</b> Single Rape/SV Assault          </div>`)[0];
+                popup_83addacfbc6112ed1bcdfdcd8af0e4e4.setContent(html_936860756e6481b4838dc58d5e073339);
+            
+        
+
+        circle_marker_ddc5803b09ea68837d22ab95ba54fdcb.bindPopup(popup_83addacfbc6112ed1bcdfdcd8af0e4e4)
+        ;
+
+        
+    
+    
+            feature_group_sub_group_2187762a5c5b2dfc712a2b0127233b90.addTo(map_dfee61e92ed23e41706c91047e194803);
+        
+    
+            var feature_group_sub_group_8e6955fa972d380c1a4439e8612356b8 = L.featureGroup.subGroup(
+                feature_group_35bfe046d79bbec0e514b5ce1f26b4cf
+            );
+        
+    
+            var heat_map_ef433ffb55c46f9f8d12c9fedfc1d405 = L.heatLayer(
+                [[10.0, 7.1, 3.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 13,
+  "radius": 15,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_ef433ffb55c46f9f8d12c9fedfc1d405.addTo(feature_group_sub_group_8e6955fa972d380c1a4439e8612356b8);
+        
+    
+            var circle_marker_90de4d56b8452cfc24bbb38f80923fe0 = L.circleMarker(
+                [10.0, 7.1],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_sub_group_8e6955fa972d380c1a4439e8612356b8);
+        
+    
+        var popup_c3622a49cdb73ea3377e41ab21695bb4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dbb06a509773ffb3cd6bcc7834d3f99d = $(`<div id="html_dbb06a509773ffb3cd6bcc7834d3f99d" style="width: 100.0%; height: 100.0%;">         <b>State:</b> Niger State<br>         <b>Year:</b> 2023<br>         <b>Victims:</b> 3<br>         <b>Assault Type:</b> Mass SV Assault         </div>`)[0];
+                popup_c3622a49cdb73ea3377e41ab21695bb4.setContent(html_dbb06a509773ffb3cd6bcc7834d3f99d);
+            
+        
+
+        circle_marker_90de4d56b8452cfc24bbb38f80923fe0.bindPopup(popup_c3622a49cdb73ea3377e41ab21695bb4)
+        ;
+
+        
+    
+    
+            feature_group_sub_group_8e6955fa972d380c1a4439e8612356b8.addTo(map_dfee61e92ed23e41706c91047e194803);
+        
+    
+            var layer_control_1233339545ba7550b4a98e25dc7a6005_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_2cf07837274b99d413ee86ced6f306b0,
+                },
+                overlays :  {
+                    "All Incidents" : feature_group_35bfe046d79bbec0e514b5ce1f26b4cf,
+                    "Other Incidents" : feature_group_sub_group_3dcfea5bb71d5773139edfa2c7736163,
+                    "Non-State Actor Incidents" : feature_group_sub_group_bb7ed69837501a0f8159c1799a3cd51a,
+                    "No Information Incidents" : feature_group_sub_group_dcb4fce3b56c2c6a867f71e9f345f4d3,
+                    "Police Incidents" : feature_group_sub_group_698705bb9803255cda77a2dc1d7b93dc,
+                    "Patient or Family Incidents" : feature_group_sub_group_d01387f3ec5db1159fde5c1fc37d1ce7,
+                    "Criminal Incidents" : feature_group_sub_group_7c155f34ff63edc516f578d3cf9fdb35,
+                    "Employee Incidents" : feature_group_sub_group_2187762a5c5b2dfc712a2b0127233b90,
+                    "Foreign Forces - Military Incidents" : feature_group_sub_group_8e6955fa972d380c1a4439e8612356b8,
+                },
+            };
+            let layer_control_1233339545ba7550b4a98e25dc7a6005 = L.control.layers(
+                layer_control_1233339545ba7550b4a98e25dc7a6005_layers.base_layers,
+                layer_control_1233339545ba7550b4a98e25dc7a6005_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_dfee61e92ed23e41706c91047e194803);
+
+        
+</script>
+</html>
